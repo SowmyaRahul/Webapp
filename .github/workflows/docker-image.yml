@@ -32,7 +32,7 @@ jobs:
       run: |
        docker build -t 1petclinic:latest .
        docker tag 1petclinic:latest ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/1petclinic:latest
-        env:
+      env:
            AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
            AWS_REGION: ${{ secrets.AWS_REGION }}
 
